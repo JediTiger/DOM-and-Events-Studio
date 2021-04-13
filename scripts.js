@@ -51,8 +51,16 @@ abortButton.addEventListener("click", function() {
 	<button id="button-left">Left</button>
 */
 buttonDown.addEventListener("click", function() {
-	spaceShuttleHeight.innerHTML = /*spaceShuttleHeight.innerHTML -*/ 10000;
-	console.log("Lower shuttle height by 10000");
+	console.log(flightStatus.innerHTML = "Shuttle in flight.");
+	if (flightStatus.innerHTML = "Shuttle in flight.") {
+		spaceShuttleHeight.innerHTML = spaceShuttleHeight.innerHTML - 10000;
+		console.log("Lower shuttle height by 10000");
+	}
+	
+});
+buttonUp.addEventListener("click", function() {
+	spaceShuttleHeight.innerHTML = spaceShuttleHeight.innerHTML + 10000;
+	console.log("Increase shuttle height by 10000");
 	
 });
 // Bonus
