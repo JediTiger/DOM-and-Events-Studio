@@ -6,23 +6,23 @@ function init () {
     const abortButton = document.getElementById("missionAbort");
     const spaceShuttleHeight = document.getElementById("spaceShuttleHeight");
 // 2
-button.addEventListener("click", function() {
+takeOffButton.addEventListener("click", function() {
   let liftoffAnswer = window.confirm("Confirm that the shuttle is ready for takeoff.")
-  if (lifftoffAnswer) {
-    flightStatus.innerHtml = "Shuttle in flight.";
+  if (liftoffAnswer) {
+    flightStatus.innerHTML = "Shuttle in flight.";
     console.log("Shuttle in flight.");
-    shuttleBackground.backgroundColor = "blue";
+    shuttleBackground.style.background = "blue";
     console.log("Background color changed to blue");
-    spaceShuttleHeight.innerHTML = 10000;
+    spaceShuttleHeight.innerHTML = "10,000";
     console.log("Shuttle heigth set to 10,000 miles.")
   }
 });
 // 3
 landingButton.addEventListener("click", function() {
   window.alert("The shuttle is landing. Landing gear engaged.");
-  flightStatus.innerHtml = "The shuttle has landed.";
+  flightStatus.innerHTML = "The shuttle has landed.";
   console.log("The shuttle has landed.");
-  shuttleBackground.backgroundColor = "green";
+  shuttleBackground.style.background = "green";
   console.log("Background color changed to green");
   spaceShuttleHeight.innerHTML = 0;
   console.log("Shuttle heigth set to 0 miles.")
