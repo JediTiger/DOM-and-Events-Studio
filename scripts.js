@@ -40,7 +40,7 @@ abortButton.addEventListener("click", function() {
     console.log("Mission aborted.");
     shuttleBackground.style.background = "green";
     console.log("Background color changed to green");
-    spaceShuttleHeight.innerHTML = "0";
+    spaceShuttleHeight.innerHTML = 0;
     console.log("Shuttle heigth set to 0 miles.");
   }
 // 5
@@ -50,22 +50,23 @@ abortButton.addEventListener("click", function() {
 	<button id ="button-right">Right</button>
 	<button id="button-left">Left</button>
 */
+});
 buttonDown.addEventListener("click", function() {
-	console.log(flightStatus.innerHTML = "Shuttle in flight.");
-	if (flightStatus.innerHTML = "Shuttle in flight.") {
-		spaceShuttleHeight.innerHTML = spaceShuttleHeight.innerHTML - 10000;
+	if (flightStatus.innerHTML == "Shuttle in flight.") {
+		spaceShuttleHeight.innerHTML = Number(spaceShuttleHeight.innerHTML) - 10000;
 		console.log("Lower shuttle height by 10000");
 	}
 	
 });
 buttonUp.addEventListener("click", function() {
-	spaceShuttleHeight.innerHTML = spaceShuttleHeight.innerHTML + 10000;
-	console.log("Increase shuttle height by 10000");
-	
+	if (flightStatus.innerHTML == "Shuttle in flight.") {
+		spaceShuttleHeight.innerHTML = Number(spaceShuttleHeight.innerHTML) + 10000;
+		console.log("Increase shuttle height by 10000");
+	}
 });
 // Bonus
 //
-});
 }
 // 1
+console.log("10px"-"10px");
 window.addEventListener("load", init);
