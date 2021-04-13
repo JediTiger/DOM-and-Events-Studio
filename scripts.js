@@ -9,22 +9,27 @@ function init () {
 button.addEventListener("click", function() {
   let liftoffAnswer = window.confirm("Confirm that the shuttle is ready for takeoff.")
   if (lifftoffAnswer) {
-    flightStatus.innerHtml = "Shuttle in flight."
-    // Left off here
+    flightStatus.innerHtml = "Shuttle in flight.";
+    console.log("Shuttle in flight.");
+    shuttleBackground.backgroundColor = "blue";
+    console.log("Background color changed to blue");
+    // somehow increase shuttle height by 10,000 miles
   }
-  paragraph.innerHTML = "Houston, we have liftoff!";
-  console.log("Houston, we have liftoff!");    
 });
-}
 // 3
 button.addEventListener("click", function() {
-  paragraph.innerHTML = "Houston, we have liftoff!";
-  console.log("Houston, we have liftoff!");    
+  window.alert("The shuttle is landing. Landing gear engaged.");
+  flightStatus.innerHtml = "The shuttle has landed.";
+  console.log("The shuttle has landed.");
+  shuttleBackground.backgroundColor = "green";
+  console.log("Background color changed to green");
+  // somehow reset shuttle height to 0
 });
 // 4
 button.addEventListener("click", function() {
   paragraph.innerHTML = "Houston, we have liftoff!";
   console.log("Houston, we have liftoff!");    
 });
-
+}
+// 1
 window.addEventListener("load", init);
